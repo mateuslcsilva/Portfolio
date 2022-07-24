@@ -1,0 +1,111 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /*     font-family: 'DM Sans', sans-serif;
+    font-family: 'Fahkwang', sans-serif; */
+    font-family: 'Mitr', sans-serif;
+    /*     font-family: 'Prompt', sans-serif; */
+}
+
+a {
+    text-decoration: none !important;
+}
+
+.collapse {}
+
+.navbar {
+    background: rgb(0, 0, 0);
+    background: linear-gradient(48deg, rgba(0, 0, 0, 0.8) 19%, rgba(255, 255, 255, 0.65) 69%);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+
+
+
+
+main {
+    padding: 0;
+    margin: 0;
+}
+
+.section-one {
+    height: 100vh;
+    width: 100vw;
+    background: url(./assets/images/background-image.jpg) no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+}
+
+.main-title {
+    position: absolute;
+    top: 32%;
+    left: 15%;
+    color: #121212b8;
+    font-weight: bold;
+    font-size: 65px;
+    /*     font-family: 'DM Sans', sans-serif;
+    font-family: 'Fahkwang', sans-serif; */
+    /* font-family: 'Mitr', sans-serif; */
+    font-family: 'Prompt', sans-serif;
+}
+
+.section-dark {
+    background-color: #121212b6;
+    height: 85vh;
+    width: 100vw;
+}
+
+.section-light {
+    background: url(./assets/images/background-image.jpg) no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 85vh;
+    width: 100vw;
+}
+
+
+
+
+.active {
+    position: relative;
+    transition: .3s ease;
+}
+
+.active::before {
+    content: '';
+    position: absolute;
+    bottom: 3px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: rgb(108, 117, 125);
+    transition: .3s ease;
+}
+
+footer{
+    position: absolute;
+    bottom: 2px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+@media only screen and (min-width: 1300px) {
+    .navbar {
+        position: relative;
+    }
+
+    .nav {
+        position: absolute;
+        right: 5%;
+    }
+
+}
+
+@media only screen and (max-width: 1400px) {
+    .main-title {
+        font-size: 45px;
+    }
+}
