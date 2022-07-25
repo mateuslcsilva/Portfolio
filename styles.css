@@ -1,3 +1,4 @@
+
 * {
     padding: 0;
     margin: 0;
@@ -10,9 +11,9 @@
 
 a {
     text-decoration: none !important;
+    cursor: pointer;
+    color: inherit !important;
 }
-
-.collapse {}
 
 .navbar {
     background: rgb(0, 0, 0);
@@ -20,10 +21,6 @@ a {
     background-size: cover;
     background-attachment: fixed;
 }
-
-
-
-
 
 main {
     padding: 0;
@@ -39,10 +36,16 @@ main {
     position: relative;
 }
 
-.main-title {
+.main-text{
     position: absolute;
     top: 32%;
     left: 15%;
+    max-width: fit-content;
+    max-height: fit-content;
+}
+
+.main-title {
+
     color: #121212b8;
     font-weight: bold;
     font-size: 65px;
@@ -52,9 +55,21 @@ main {
     font-family: 'Prompt', sans-serif;
 }
 
+.main-contact-section > a{
+    color: rgb(108,117,125) !important;
+}
+
+.main-contact-section > a:hover{
+    color: #121212b8 !important;
+}
+
+.job-title{
+    color: #121212b8;
+}
+
 .section-dark {
     background-color: #121212b6;
-    height: 85vh;
+    height: 75vh;
     width: 100vw;
 }
 
@@ -62,12 +77,10 @@ main {
     background: url(./assets/images/background-image.jpg) no-repeat center;
     background-size: cover;
     background-attachment: fixed;
-    height: 85vh;
+    height: 75vh;
     width: 100vw;
+    position: relative;
 }
-
-
-
 
 .active {
     position: relative;
@@ -85,11 +98,61 @@ main {
     transition: .3s ease;
 }
 
+.contact-section{
+    display: flex;
+    flex-direction: row;
+}
+
+.contact-title{
+    position: absolute;
+    top: 2%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
 footer{
     position: absolute;
     bottom: 2px;
     left: 50%;
     transform: translateX(-50%);
+}
+
+
+.contact-information, .contact-information{
+    width: 50%;
+    height: 100%;
+}
+
+.contact-information, .contact-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.contact-container{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.contact-container > a:hover{
+    color: #1212126e !important;
+}
+
+input, textarea{
+    display: block;
+    margin-top: 5px;
+    width: 125%;
+    border-radius: 5px;
+    border: none;
+    padding: 2px;
+}
+
+input{
+    height: 35px;
+
 }
 
 @media only screen and (min-width: 1300px) {
@@ -100,6 +163,13 @@ footer{
     .nav {
         position: absolute;
         right: 5%;
+    }
+
+}
+
+@media only screen and (max-width: 1300px) {
+    .contact-section{
+        flex-direction: column;
     }
 
 }
