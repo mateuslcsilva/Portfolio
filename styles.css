@@ -192,7 +192,7 @@ input{
     .contact-section{
         flex-direction: column;
         gap: 15px;
-        height: 120vh;
+        height: 140vh;
     }
 
     .contact-information{
