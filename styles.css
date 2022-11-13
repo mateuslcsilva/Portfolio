@@ -231,6 +231,11 @@ input{
         width: 0;
     }
 
+    .about-me-section{
+        height: fit-content;
+        padding: 5% 0;
+    }
+
     .about-me-text{
         width: 100vw;
     }
