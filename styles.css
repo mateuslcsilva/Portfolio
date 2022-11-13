@@ -16,10 +16,16 @@ a {
 }
 
 .navbar {
+    position: relative;
     background: rgb(0, 0, 0);
     background: linear-gradient(48deg, rgba(0, 0, 0, 0.8) 19%, rgba(255, 255, 255, 0.65) 69%);
     background-size: cover;
     background-attachment: fixed;
+}
+
+.nav {
+    position: absolute;
+    right: 5%;
 }
 
 main {
@@ -118,9 +124,13 @@ footer{
 }
 
 
-.contact-information, .contact-information{
+.contact-information{
     width: 50%;
     height: 100%;
+}
+
+.contact-information a{
+    width: fit-content;
 }
 
 .contact-information, .contact-form{
@@ -128,7 +138,6 @@ footer{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
 }
 
 .contact-container{
@@ -155,27 +164,71 @@ input{
 
 }
 
-@media only screen and (min-width: 1300px) {
+@media (max-width: 600px) {
+    .main-text{
+        margin-left: -11vw;
+    }
+
+    .main-title{
+        font-size: 30px;
+    }
+
     .navbar {
         position: relative;
+        background: #191919;
+        background: linear-gradient(17deg, #191919 1%, rgba(255, 255, 255, 0.65) 49%);
     }
 
     .nav {
         position: absolute;
-        right: 5%;
+        right: 8%;
+        display: flex;
+        flex-direction: column;
+        background-color: #FFF;
+        box-shadow: 5px 5px 95px #19191955;
+        border-radius: 3px;
     }
 
-}
-
-@media only screen and (max-width: 1300px) {
     .contact-section{
         flex-direction: column;
+        gap: 15px;
+        height: 100vh;
     }
 
-}
-
-@media only screen and (max-width: 1400px) {
-    .main-title {
-        font-size: 45px;
+    .contact-information{
+        width: 100%;
+        height: fit-content;
+        margin-top: 25%;
+        font-size: 90%;
     }
+    
+    .contact-information a{
+        width: fit-content;
+        margin-left: 10%;
+    }
+
+    .contact-information p{
+        font-size: 160% !important;
+    }
+    
+    .contact-form{
+        height: fit-content;
+        width: 100%;
+        margin-top: 15%;
+        align-items: flex-start;
+        margin-left: 10%;
+    }
+
+    .sendWhatsappMessage{
+        margin-left: 100%;
+        transform: translateX(-50%);
+    }
+
+    footer{
+        position: absolute;
+        bottom: 25px;
+        text-align: center;
+        width: 100%;
+    }
+
 }
