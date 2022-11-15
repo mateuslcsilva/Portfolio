@@ -23,7 +23,14 @@ document.querySelector('#messageText').addEventListener('change', () => {
     messageText = document.querySelector('#messageText').value 
     console.log(messageText)
     messageName && workplaceName ? message = `Oi, me chamo ${messageName}, sou da empresa ${workplaceName} e gostei do seu portfolio. \n ${messageText}` : message = `${messageText}`
-    let messageEncoder = message.replaceAll(' ', '%20')
-    document.querySelector('#sendWhatsappMessage').href =`https://wa.me/5544991247281?text=${messageEncoder}`
+    let messageEncoded = message.replaceAll(' ', '%20')
+    document.querySelector('#sendWhatsappMessage').href =`https://wa.me/5544991247281?text=${messageEncoded}`
 })
+
+const changeKnowledgeShowed = (childrenIndex, element) => {
+    document.querySelector('.group-active').classList.remove('group-active')
+    document.querySelector('.dash-select-active').classList.remove('dash-select-active')
+    element.classList.add('dash-select-active')
+    document.querySelector('.knowledge-groups').children[childrenIndex].classList.add('group-active')
+}
 
