@@ -11,6 +11,10 @@ a {
   color: inherit !important;
 }
 
+.title{
+  text-align: center;
+}
+
 .separation{
   position: absolute;
   width: 50%;
@@ -242,6 +246,87 @@ main {
 .dash-select-active {
   transition: 0.3s ease;
   background-color: #191919;
+}
+
+.projects-section{
+  height: max-content !important;
+}
+
+.projects-section div{
+display: grid;
+grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+min-height: max-content;
+width: 70%;
+margin: 0 auto;
+}
+
+.projects-section .card{
+  width: 400px;
+  height: 500px;
+  background-color: transparent;
+  border: 1px solid #4a4a4a90;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  margin-bottom: 25px;
+}
+
+.card img{
+  border-radius: 3px 3px 0 0;
+  object-fit: contain;
+}
+
+.card .project-info{
+  height: 80%;
+  width: 100%;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  background-color: #f2f2f2;
+}
+
+.card .project-info p{
+  text-align: center;
+}
+
+.card .project-actions{
+  width: 80%;
+  height: 60px;
+  padding: 15px;
+  display: flex;
+  justify-content: space-around;
+  background-color: #f2f2f2;
+}
+
+.card .project-actions a{
+  height: fit-content !important;
+  border-radius: 3px;
+  padding: 5px 15px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14pt;
+  background-color: #4a4a4a;
+  border: 1px solid #4a4a4a90;
+  color: #f2f2f2 !important;
+  transition: 0.3s ease;
+}
+
+.card .project-actions a.code-link{
+  background-color: transparent;
+  border: 1px solid #4a4a4a90;
+  color: inherit !important;
+}
+
+.card .project-actions a:hover{
+  transform: translateY(-2px);
+  transition: 0.3s ease;
+}
+
+.card .project-actions a i{
+  transform: translateX(-20%);
 }
 
 .contact-section {
