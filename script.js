@@ -34,3 +34,8 @@ const changeKnowledgeShowed = (childrenIndex, element) => {
     document.querySelector('.knowledge-groups').children[childrenIndex].classList.add('group-active')
 }
 
+const scrollToElement = (element) => {
+    console.log(element, element.getBoundingClientRect(), element.getBoundingClientRect().y)
+    const yPosition = element.getBoundingClientRect().y
+        window.scrollTo(0, element.getBoundingClientRect().y - 50)
+}

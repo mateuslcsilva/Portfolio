@@ -2,13 +2,24 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: "Mitr", sans-serif;
+  font-family: "Prompt", sans-serif;
 }
 
 a {
   text-decoration: none !important;
   cursor: pointer;
   color: inherit !important;
+}
+
+.separation{
+  position: absolute;
+  width: 50%;
+  height: 1px !important;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #4a4a4a90 !important;
+  border-radius: 3px;
 }
 
 .navbar {
@@ -55,6 +66,7 @@ main {
   font-weight: bold;
   font-size: 65px;
   font-family: "Prompt", sans-serif;
+  transform: translateX(-5px);
 }
 
 .main-contact-section > a {
@@ -71,18 +83,20 @@ main {
 
 .section-dark {
   background-color: #252525;
-  height: 75vh;
+  height: 85vh;
   width: 100vw;
   color: white;
+  position: relative;
 }
 
 .section-light {
   background: url(./assets/images/background-image.jpg) no-repeat center;
   background-size: cover;
   background-attachment: fixed;
-  height: 75vh;
+  height: 85vh;
   width: 100vw;
   position: relative;
+  padding: 40px 0;
 }
 
 .active {
@@ -120,6 +134,7 @@ main {
 .personal-picture {
   background: url(./assets/images/foto.jpg) no-repeat center;
   background-size: cover;
+  object-fit: contain;
   width: 60%;
   height: 60%;
   border-radius: 3px;
@@ -176,6 +191,7 @@ main {
   width: 20%;
   height: 80%;
   background-size: cover;
+  object-fit: contain;
 }
 
   .minor-knowledges div {
@@ -191,6 +207,7 @@ main {
   .minor-knowledge-image{
     width: 80%;
     height: 60%;
+    object-fit: contain;
   }
     
   .div1 { grid-area: 2 / 2 / 4 / 4; }
@@ -206,7 +223,9 @@ main {
   position: absolute;
   bottom: 20px;
   right: 50%;
-  transform: translateX(50%);
+  transform: translate(50%, 600%);
+  display: flex;
+  justify-content: center;
 }
 
 .dash-select {
@@ -359,6 +378,33 @@ input {
   .group-activ {
     left: 0;
   } */
+
+  .knowledge-section {
+    position: relative;
+    width: 100%;
+    height: 800px;
+  }
+
+  .knowledge-group div {
+    height: 40%;
+  }
+
+  .minor-knowledges div {
+    height: 40%;
+  }
+
+  .minor-knowledge-image.div3{
+    transform: scale(2) translateY(10%);
+  }
+
+  .minor-knowledge-image.div4{
+    transform: translateY(10%);
+  }
+
+  .minor-knowledge-image.div7{
+    object-fit: contain;
+    transform: scale(2) translateY(10%);
+  }
 
   .contact-section {
     flex-direction: column;

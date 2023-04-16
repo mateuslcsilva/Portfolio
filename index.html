@@ -21,9 +21,9 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
 </head>
 
-<body>
+<body onscroll="">
 
-    <nav id="navbar-example2" class="navbar bg-light px-3 fixed-top navbar-expand-md">
+    <nav id="navbar-example2" class="navbar bg-light px-3 fixed-top navbar-expand-md" data-offset="50px">
         <a class="navbar-brand fs-3 ms-3" href="#"><span class="text-white fs-2">P</span>ortfolio</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -36,8 +36,9 @@
                             class="text-secondary navbar-link">Home</span></a>
                 </li>
                 <li class="navitem fs-3 text-secondary">
-                    <a class="nav-link" href="#scrollspyHeading2"><span class="text-secondary navbar-link">Sobre
-                            mim</span></a>
+                    <a class="nav-link" href="#scrollspyHeading2"
+                        onclick="scrollToElement(document.querySelector('#scrollspyHeading2'))"><span
+                            class="text-secondary navbar-link">Sobre mim</span></a>
                 </li>
                 <li class="navitem fs-3 text-secondary">
                     <a class="nav-link" href="#scrollspyHeading3"><span
@@ -55,8 +56,8 @@
         </div>
     </nav>
 
-    <main data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-root-margin="0px 0px -40%"
-        data-bs-smooth-scroll="true" class="scrollspy-example" tabindex="0">
+    <main data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-smooth-scroll="true" class="scrollspy-example"
+        tabindex="0">
 
         <section class="section-one" id="scrollspyHeading1">
             <div class="main-text">
@@ -76,8 +77,8 @@
             </div>
 
         </section>
-
-        <section class="section-dark about-me-section" id="scrollspyHeading2">
+        <section class="section-light about-me-section" id="scrollspyHeading2">
+            <div class="separation"> </div>
             <div class="picture-div">
                 <div class="personal-picture">
                 </div>
@@ -86,22 +87,27 @@
                 <h3 class="mb-3">Oi, muito prazer, eu sou o Mateus, obrigado por visitar meu portfólio!
                 </h3>
                 <p class="fs-5">
-                    Desenvolvedor TypeScript, amante de música e de tecnologia, esse sou eu hoje. Há cerca de um ano venho estudando
+                    Desenvolvedor TypeScript, amante de música e de tecnologia, esse sou eu hoje. Há cerca de um ano
+                    venho estudando
                     desenvolvimento, com ênfase no front-end e design, mas também aprendendo back-end e banco de dados.
                 </p>
                 <p class="fs-5">
-                    Esse portfólio é o resumo dos meus últimos 12 meses, onde falarei sobre o que aprendi e mostrando um pouco 
+                    Esse portfólio é o resumo dos meus últimos 12 meses, onde falarei sobre o que aprendi e mostrando um
+                    pouco
                     da minha trajetória, focando os projetos atuais, mas não deixando de lado o meu caminho até aqui.
                 </p>
                 <p class="fs-5">
-                    Caso queira entender melhor minha evolução, ou mesmo avaliar melhor meus projetos, o meu perfil no GitHub está
-                    disponível mais acima, e mais abaixo também; e claro, pode me chamar pra conversar no whatsapp ou linkedin, 
+                    Caso queira entender melhor minha evolução, ou mesmo avaliar melhor meus projetos, o meu perfil no
+                    GitHub está
+                    disponível mais acima, e mais abaixo também; e claro, pode me chamar pra conversar no whatsapp ou
+                    linkedin,
                     ficarei feliz em falar contigo!
                 </p>
-               </div>
+            </div>
 
         </section>
         <section class="section-light knowledge-section" id="scrollspyHeading3">
+            <div class="separation"> </div>
             <div class="knowledge-groups">
                 <div class="knowledge-group group1 group-active">
                     <h3 class="text-center">Conhecimentos que domino!</h3>
@@ -110,8 +116,10 @@
                         <img class="knowledge-image" src="assets/images/html5-logo.png" alt="">
                         <img class="knowledge-image" src="assets/images/js-logo-png-5.png" alt="">
                     </div>
-                    <p class="fs-5 text-center">Conhecimentos nos quais já tenho amplo conhecimento, já usei diversar vezes em projetos de portfólio e,
-                         por mais que ainda tenha muito a aprender, já me sinto muito confortável com meu conhecimento aqui.
+                    <p class="fs-5 text-center">Conhecimentos nos quais já tenho amplo conhecimento, já usei diversar
+                        vezes em projetos de portfólio e,
+                        por mais que ainda tenha muito a aprender, já me sinto muito confortável com meu conhecimento
+                        aqui.
                     </p>
                 </div>
                 <div class="knowledge-group group2">
@@ -120,8 +128,10 @@
                         <img class="knowledge-image" src="assets/images/React-icon.svg" alt="">
                         <img class="knowledge-image" src="assets/images/typescript-logo.png" alt="" style="height: 70%">
                     </div>
-                    <p class="fs-5 text-center">São os conhecimentos que mais uso hoje em meus projetos. Sei bastante sobre os dois, e sobre o uso deles juntos,
-                        mas sinto que ainda tenho muito a melhorar e conseguirei fazer muito mais quando tiver mais experiente e confortável com o ambiente React + TS.
+                    <p class="fs-5 text-center">São os conhecimentos que mais uso hoje em meus projetos. Sei bastante
+                        sobre os dois, e sobre o uso deles juntos,
+                        mas sinto que ainda tenho muito a melhorar e conseguirei fazer muito mais quando tiver mais
+                        experiente e confortável com o ambiente React + TS.
                     </p>
                 </div>
                 <div class="knowledge-group group3">
@@ -131,24 +141,33 @@
                         <img class="knowledge-image" src="assets/images/postgresql-logo.png" alt="">
                         <img class="knowledge-image" src="assets/images/spring-logo.png" alt="" style="height: 70%">
                     </div>
-                    <p class="fs-5 text-center">São conhecimentos que já usei em alguns projetos, e fiz um breve estudo sobre pra isso, mas ainda não tive um estudo aprofundado.
-                        São conhecimentos que julgo importantes, que espero em breve poder investir mais do meu tempo para aprender e dominar também essa parte de back-end.
+                    <p class="fs-5 text-center">São conhecimentos que já usei em alguns projetos, e fiz um breve estudo
+                        sobre pra isso, mas ainda não tive um estudo aprofundado.
+                        São conhecimentos que julgo importantes, que espero em breve poder investir mais do meu tempo
+                        para aprender e dominar também essa parte de back-end.
                     </p>
                 </div>
                 <div class="minor-knowledges group4">
                     <h3 class="text-center">Outras ferramentas que utilizo</h3>
                     <div>
-                        <img class="minor-knowledge-image div1" src="assets/images/nextui-logo.png" alt=""style="height: 100%; width:80%">
-                        <img class="minor-knowledge-image div2" src="assets/images/bootstrap-logo.png" alt="" style="height: 95%;">
-                        <img class="minor-knowledge-image div3" src="assets/images/bulma-logo.png" alt="" >
+                        <img class="minor-knowledge-image div1" src="assets/images/nextui-logo.png" alt=""
+                            style="height: 100%; width:80%">
+                        <img class="minor-knowledge-image div2" src="assets/images/bootstrap-logo.png" alt=""
+                            style="height: 95%;">
+                        <img class="minor-knowledge-image div3" src="assets/images/bulma-logo.png" alt="">
                         <img class="minor-knowledge-image div4" src="assets/images/git-logo.png" alt="">
-                        <img class="minor-knowledge-image div5" src="assets/images/vite-logo.png" alt="" style="height: 95%;">
-                        <img class="minor-knowledge-image div6" src="assets/images/github-logo.png" alt="" style="height: 95%;">
+                        <img class="minor-knowledge-image div5" src="assets/images/vite-logo.png" alt=""
+                            style="height: 95%;">
+                        <img class="minor-knowledge-image div6" src="assets/images/github-logo.png" alt=""
+                            style="height: 100%;">
                         <img class="minor-knowledge-image div7" src="assets/images/google-fonts-logo.svg" alt="">
-                        <img class="minor-knowledge-image div8" src="assets/images/materialui-logo.png" alt="" style="height: 95%; width: 95%;">
+                        <img class="minor-knowledge-image div8" src="assets/images/materialui-logo.png" alt=""
+                            style="height: 95%; width: 95%;">
                     </div>
-                    <p class="fs-5 text-center">NextUI, Bootstrap, Bulma, Git, Vite, Github, Google Fonts, MaterialUI. São todas ferramentas que utilizo no meu dia a dia
-                        de estudos no desenvolvimento. Ferramentas importantes, seja pra produtividade ou para, de fato, qualidade de código e do projeto.
+                    <p class="fs-5 text-center">NextUI, Bootstrap, Bulma, Git, Vite, Github, Google Fonts, MaterialUI.
+                        São todas ferramentas que utilizo no meu dia a dia
+                        de estudos no desenvolvimento. Ferramentas importantes, seja pra produtividade ou para, de fato,
+                        qualidade de código e do projeto.
                     </p>
                 </div>
                 <div class="dash-select-group">
@@ -160,12 +179,14 @@
             </div>
 
         </section>
-        <section class="section-dark" id="scrollspyHeading4">
+        <section class="section-light" id="scrollspyHeading4">
+            <div class="separation"> </div>
 
 
         </section>
 
         <section class="section-light contact-section" id="scrollspyHeading5">
+            <div class="separation"> </div>
             <p class="title fs-3 contact-title">
                 Contato
             </p>
@@ -200,16 +221,13 @@
                         <textarea id="messageText" rows="3"
                             placeholder="Hey! Adorei seu portfólio e queria conversar"></textarea>
                     </div>
-                    <button type="button" class="btn btn-secondary btn-lg sendWhatsappMessage"><a 
-                        id='sendWhatsappMessage'
-                        href="https://wa.me/5544991247281"
-                        target="_blank"
-                        >Enviar</a></button>
+                    <button type="button" class="btn btn-secondary btn-lg sendWhatsappMessage"><a
+                            id='sendWhatsappMessage' href="https://wa.me/5544991247281"
+                            target="_blank">Enviar</a></button>
 
                 </form>
             </div>
-            <footer>Da uma força ae, me segue no <a 
-                    target="_blank"
+            <footer>Da uma força ae, me segue no <a target="_blank"
                     href="https://www.linkedin.com/in/mateus-leite-a73277245/">
                     LinkedIn!</a></footer>
         </section>
