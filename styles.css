@@ -627,7 +627,6 @@ input {
     margin-top: 15%;
     align-items: flex-start;
     transform: translateX(10%);
-    outline: 1px solid tomato;
   }
 
   .sendWhatsappMessage {
@@ -775,7 +774,6 @@ input {
     margin-top: 15%;
     align-items: flex-start;
     transform: translateX(10%);
-    outline: 1px solid tomato;
   }
 
   .sendWhatsappMessage {
