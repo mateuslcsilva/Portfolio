@@ -1,6 +1,7 @@
 let messageName
 let workplaceName
 let messageText
+let childrenIndexShowed = 2
 
 document.querySelector('#inputName').addEventListener('change', () => {
     messageName = document.querySelector('#inputName').value
@@ -32,6 +33,18 @@ const changeKnowledgeShowed = (childrenIndex, element) => {
     document.querySelector('.dash-select-active').classList.remove('dash-select-active')
     element.classList.add('dash-select-active')
     document.querySelector('.knowledge-groups').children[childrenIndex].classList.add('group-active')
+}
+
+const nextKnowledgeShowed = () => {
+    childrenIndexShowed == 5 ? childrenIndexShowed = 2 : childrenIndexShowed++
+    const dashSelect = document.querySelectorAll('.dash-select')
+    changeKnowledgeShowed(childrenIndexShowed, dashSelect[childrenIndexShowed - 2])
+}
+
+const previousKnowledgeShowed = () => {
+    childrenIndexShowed == 2 ? childrenIndexShowed = 5 : childrenIndexShowed--
+    const dashSelect = document.querySelectorAll('.dash-select')
+    changeKnowledgeShowed(childrenIndexShowed, dashSelect[childrenIndexShowed - 2])
 }
 
 const scrollToElement = (element) => {

@@ -5,11 +5,31 @@
   font-family: "Prompt", sans-serif;
 }
 
+body{
+  scroll-behavior: smooth;
+}
+
 a {
   text-decoration: none !important;
   cursor: pointer;
   color: inherit !important;
 }
+
+::-webkit-scrollbar{
+  background-color: #4a4a4a40 !important;
+  width: 7px;
+  border-radius: 15px !important;
+}
+
+::-webkit-scrollbar-thumb{
+  background-color: #4a4a4a;
+  border-radius: 7px;
+}
+
+::-webkit-scrollbar-thumb:active{
+  background-color: #252525;
+}
+
 
 .title{
   text-align: center;
@@ -38,9 +58,10 @@ a {
   background-attachment: fixed;
 }
 
-.nav {
+.nav{
   position: absolute;
-  right: 5%;
+  top: 5px;
+  right: 10px;
 }
 
 .navbar-toggler-custom{
@@ -61,7 +82,7 @@ main {
 
 .section-one {
   height: 100vh;
-  width: 100vw;
+  width: calc(100vw - 7px);
   background: url(./assets/images/background-image.jpg) no-repeat center;
   background-size: cover;
   background-attachment: fixed;
@@ -99,7 +120,7 @@ main {
 .section-dark {
   background-color: #252525;
   height: 85vh;
-  width: 100vw;
+  width: calc(100vw - 7px);
   color: white;
   position: relative;
 }
@@ -109,7 +130,7 @@ main {
   background-size: cover;
   background-attachment: fixed;
   height: 85vh;
-  width: 100vw;
+  width: calc(100vw - 7px);
   position: relative;
   padding: 40px 0;
 }
@@ -170,9 +191,28 @@ main {
   height: 100%;
 }
 
+.chevron{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  background-color: transparent;
+  font-size: 32pt;
+  cursor: pointer;
+  z-index: 999;
+}
+
+.chevron.left{
+  left: 15px;
+}
+
+.chevron.right{
+  right: 15px;
+}
+
 .knowledge-group {
   position: absolute;
-  width: 100vw;
+  width: calc(100vw - 7px);
   height: 100%;
   padding: 30px;
   opacity: 0;
@@ -181,7 +221,7 @@ main {
 
 .minor-knowledges {
     position: absolute;
-    width: 100vw;
+    width: calc(100vw - 7px);
     height: 95%;
     padding: 30px;
     opacity: 0;
@@ -440,6 +480,7 @@ input {
   .nav {
     position: absolute;
     right: 18% !important;
+    top:50%;
     display: flex;
     flex-direction: column;
     background-color: #fff;
@@ -482,9 +523,16 @@ input {
   .knowledge-section .knowledge-groups,
   .knowledge-section .minor-knowledges,
   .knowledge-section .knowledge-group{
-    
     width: 100vw !important;
   }
+
+.chevron{
+  top: 30%;
+  transform: translateY(-50%);
+  border: none;
+  background-color: transparent;
+  font-size: 18pt;
+}
 
   .knowledge-group div {
     height: 40%;
