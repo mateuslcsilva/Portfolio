@@ -43,6 +43,17 @@ a {
   right: 5%;
 }
 
+.navbar-toggler-custom{
+  display: none;
+  border: none;
+  background-color: transparent;
+  color: #191919;
+  position: absolute;
+  right: 50px;
+  bottom: 50%;
+  transform: translateY(50%);
+}
+
 main {
   padding: 0;
   margin: 0;
@@ -389,8 +400,13 @@ input {
   height: 35px;
 }
 
-@media (max-width: 600px) {
-  .section-light {
+@media (max-width: 700px){ /* ====> MEDIA QUERY PARA TELAS PEQUENAS <==== */
+  .section-one {
+    height: 70vh !important;
+  }
+
+  .section-light,
+  .section-one {
     height: 100vh;
     width: 100vw;
   }
@@ -417,14 +433,28 @@ input {
     );
   }
 
+  .navbar-custom{
+    border: 7px;
+  }
+
   .nav {
     position: absolute;
-    right: 8%;
+    right: 18% !important;
     display: flex;
     flex-direction: column;
     background-color: #fff;
     box-shadow: 5px 5px 95px #19191955;
     border-radius: 3px;
+    height: 0;
+    overflow: hidden;
+  }
+
+  .navbar-toggler-custom{
+    display: block;
+  }
+
+  .nav.show{
+    height: 270px !important;
   }
 
   .picture-div,
@@ -436,38 +466,24 @@ input {
   .about-me-section {
     height: fit-content;
     padding: 5% 0;
+    width: 100vw;
   }
 
   .about-me-text {
-    width: 100vw;
+    width: 100% !important;
   }
-
-  /* .knowledge-section {
-    position: relative;
-    width: 100%;
-    height: 100%;
-  }
-
-  .knowledge-group {
-    position: absolute;
-    left: 150vw;
-    width: 100vw;
-    height: 100%;
-  }
-
-  .knowledge-group img {
-    width: 20%;
-    height: 40%;
-  }
-
-  .group-activ {
-    left: 0;
-  } */
 
   .knowledge-section {
     position: relative;
-    width: 100%;
+    width: 100vw;
     height: 800px;
+  }
+
+  .knowledge-section .knowledge-groups,
+  .knowledge-section .minor-knowledges,
+  .knowledge-section .knowledge-group{
+    
+    width: 100vw !important;
   }
 
   .knowledge-group div {
@@ -489,6 +505,20 @@ input {
   .minor-knowledge-image.div7{
     object-fit: contain;
     transform: scale(2) translateY(10%);
+  }
+
+  .projects-section{
+    width: 100vw;
+  }
+  
+  .projects-section div{
+  justify-content: center;
+  width: 90% !important;
+  }
+
+  .card{
+    max-height: fit-content;
+    padding-bottom: 30px;
   }
 
   .contact-section {
@@ -534,7 +564,153 @@ input {
   }
 }
 
-@media (min-width: 600px) and (max-width: 1400px) {
+@media (min-width: 701px) and (max-width: 849px) {  /* ====> MEDIA QUERY PARA TELAS DE CELULARES GRANDES <==== */
+  .section-light,
+  .section-one {
+    height: 100vh;
+    width: 120vw;
+  }
+  .section-dark {
+    height: 100vh;
+    width: 100vw;
+  }
+
+  .main-text {
+    margin-left: -11vw;
+  }
+
+  .main-title {
+    font-size: 30px;
+  }
+
+  .navbar {
+    position: relative;
+    background: #191919;
+    background: linear-gradient(
+      17deg,
+      #191919 1%,
+      rgba(255, 255, 255, 0.65) 49%
+    );
+  }
+
+  .nav {
+    position: absolute;
+    right: 18% !important;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    box-shadow: 5px 5px 95px #19191955;
+    border-radius: 3px;
+    margin-right: 50px !important;
+    transform: translateX(-50px) !important;
+  }
+
+  .navbar-toggler-custom{
+    display: block;
+  }
+
+  .picture-div,
+  .personal-picture {
+    display: none;
+    width: 0;
+  }
+
+  .about-me-section {
+    height: fit-content;
+    padding: 5% 0;
+    width: 120vw;
+  }
+
+  .about-me-text {
+    width: 100% !important;
+  }
+
+  .knowledge-section {
+    position: relative;
+    width: 120vw;
+    height: 800px;
+  }
+
+  .knowledge-section .knowledge-groups,
+  .knowledge-section .minor-knowledges,
+  .knowledge-section .knowledge-group{
+    
+    width: 120vw !important;
+  }
+
+  .knowledge-group div {
+    height: 40%;
+  }
+
+  .minor-knowledges div {
+    height: 40%;
+  }
+
+  .minor-knowledge-image.div3{
+    transform: scale(2) translateY(10%);
+  }
+
+  .minor-knowledge-image.div4{
+    transform: translateY(10%);
+  }
+
+  .minor-knowledge-image.div7{
+    object-fit: contain;
+    transform: scale(2) translateY(10%);
+  }
+
+  .projects-section{
+    width: 120vw;
+  }
+  
+  .projects-section div{
+  width: 100%;
+  }
+
+  .contact-section {
+    flex-direction: column;
+    gap: 15px;
+    height: 140vh;
+  }
+
+  .contact-information {
+    width: 100%;
+    height: fit-content;
+    margin-top: 25%;
+    font-size: 90%;
+  }
+
+  .contact-information a {
+    width: fit-content;
+    margin-left: 10%;
+  }
+
+  .contact-information p {
+    font-size: 160% !important;
+  }
+
+  .contact-form {
+    height: fit-content;
+    width: 100%;
+    margin-top: 15%;
+    align-items: flex-start;
+    margin-left: 10%;
+  }
+
+  .sendWhatsappMessage {
+    margin-left: 100%;
+    transform: translateX(-50%);
+  }
+
+  footer {
+    position: absolute;
+    bottom: 2px;
+    text-align: center;
+    width: 100%;
+  }
+}
+
+@media (min-width: 850px) and (max-width: 1400px) { /* ====> MEDIA QUERY PARA TELAS DE 17" HD <==== */
   .about-me-text p {
     font-size: 110% !important;
   }

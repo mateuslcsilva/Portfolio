@@ -39,3 +39,5 @@ const scrollToElement = (element) => {
     const yPosition = element.getBoundingClientRect().y
         window.scrollTo(0, element.getBoundingClientRect().y - 50)
 }
+
+const showNavBar = () => document.querySelector('.nav').classList.toggle('show')
