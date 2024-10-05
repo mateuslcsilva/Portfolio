@@ -346,6 +346,7 @@ main {
 .card img {
   border-radius: 3px 3px 0 0;
   object-fit: contain;
+  
 }
 
 .card .project-info {
@@ -459,6 +460,10 @@ textarea {
 
 input {
   height: 35px;
+}
+
+abbr{
+  all: unset !important;
 }
 
 @media (max-width: 700px) { /* ====> MEDIA QUERY PARA TELAS PEQUENAS <==== */
